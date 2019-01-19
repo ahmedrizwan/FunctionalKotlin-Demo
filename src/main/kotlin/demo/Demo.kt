@@ -2,10 +2,11 @@ package demo
 
 fun main(args: Array<String>) {
     generateRawUsers()
-            .map {
-                val person = fullNameToPerson(it.fullName)
-                val phoneNumber = phoneToDomainPhoneNumber(it.phone)
+            .map { rawUser ->
+                val person = fullNameToPerson(rawUser.fullName)
+                val phoneNumber = phoneToDomainPhoneNumber(rawUser.phone)
 
+                println("$person and $phoneNumber parsed!")
                 DomainUser(person, phoneNumber)
             }
             .map { domainUser ->

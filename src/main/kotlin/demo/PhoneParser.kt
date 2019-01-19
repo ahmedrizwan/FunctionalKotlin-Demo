@@ -23,7 +23,7 @@ fun phoneToDomainPhoneNumber(phone: String): PhoneNumber {
         val prefix = values[2].toInt()
         val lineNumber = values[3].toInt()
 
-        PhoneNumber(countryCode, areaCode, prefix, lineNumber)
+        return PhoneNumber(countryCode, areaCode, prefix, lineNumber)
     }
 
     throw Exception("$phone is not the accepted format!")
