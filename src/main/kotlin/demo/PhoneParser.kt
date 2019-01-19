@@ -14,7 +14,7 @@ fun String.safeToInt(): Either<Exception, Int> {
     return Try { this.toInt() }.toEither { Exception("$this is not a number!") }
 }
 
-fun phoneToDomainPhoneNumber(phone: String): PhoneNumber {
+fun phoneNumberFrom(phone: String): PhoneNumber {
     val matched = pattern.matchEntire(phone)
     matched?.let {
         val values = it.groupValues.toList().takeLast(4)
