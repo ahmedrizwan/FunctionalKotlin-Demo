@@ -2,10 +2,10 @@ package demo
 
 fun main(args: Array<String>) {
     generateRawUsers()
-            .map(::transform)
+            .map(::domainUserFrom)
 }
 
-fun transform(rawUser: RawUser) {
+fun domainUserFrom(rawUser: RawUser) {
     
 }
 
