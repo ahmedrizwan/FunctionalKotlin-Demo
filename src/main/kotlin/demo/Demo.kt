@@ -4,12 +4,11 @@ fun main(args: Array<String>) {
     generateRawUsers()
             .map { rawUser ->
                 val person = fullNameToPerson(rawUser.fullName)
+                println(person)
                 val phoneNumber = phoneToDomainPhoneNumber(rawUser.phone)
+                println(phoneNumber)
 
-                println("$person and $phoneNumber parsed!")
-                DomainUser(person, phoneNumber)
+                // create domainUser
             }
-            .map { domainUser ->
-                println(domainUser)
-            }
+
 }
