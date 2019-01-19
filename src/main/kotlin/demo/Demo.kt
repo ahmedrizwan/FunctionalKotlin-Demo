@@ -5,7 +5,7 @@ fun main(args: Array<String>) {
             .map(::transform)
 }
 
-fun transform(rawUser: RawUser): DomainUser {
-    throw NotImplementedError()
+fun transform(rawUser: RawUser) {
+    
 }
 
