@@ -1,8 +1,27 @@
 package demo
 
+// Models
+data class RawUser(val fullName: String,
+                   val email: String,
+                   val phone: String,
+                   val streetAddress: String,
+                   val city: String,
+                   val zipCode: String)
+
+data class DomainUser(val person: Person,
+                      val phoneNumber: PhoneNumber)
+
+data class Person(val firstName: String,
+                  val lastName: String)
+
+data class PhoneNumber(val countryCode: Int,
+                       val areaCode: Int,
+                       val prefix: Int,
+                       val lineNumber: Int)
+
 fun generateRawUsers() = listOf(RawUser("Roth Drake", "vestibulum.nec@eratEtiam.net", "1-230-665-4456", "P.O. Box 980, 4942 Mattis. St.", "Gellik", "10691"),
-        RawUser("Kevin Kaufman", "sem@necorciDonec.ca", "1-609-284-0788", "Ap #840-3698 Ipsum. Ave", "Ficarolo", "25265"),
-        RawUser("Isaiah", "Phasellus.libero.mauris@iaculisquispede.edu", "1-721-480-4797", "P.O. Box 701, 2269 Orci. Road", "Limelette", "22598"),
+        RawUser("Kevin Kaufman", "sem@necorciDonec.ca", "1-609-284-07885", "Ap #840-3698 Ipsum. Ave", "Ficarolo", "25265"),
+        RawUser("Isaiah", "Phasellus.libero.mauris@iaculisquispede.edu", "1-721-480-4717", "P.O. Box 701, 2269 Orci. Road", "Limelette", "22598"),
         RawUser("Hall Dale", "turpis@Cumsociis.net", "1-153-279-7425", "Ap #682-1860 Vivamus St.", "Oyen", "47919"),
         RawUser("Harlan Ferguson", "feugiat.nec.diam@ac.edu", "1-185-179-1491", "Ap #146-2358 Risus, Rd.", "Murdochville", "50832"),
         RawUser("Lance Cabrera", "non.sollicitudin@natoquepenatibuset.co.uk", "1-413-858-6331", "Ap #769-4638 In Avenue", "Arvier", "66909"),
