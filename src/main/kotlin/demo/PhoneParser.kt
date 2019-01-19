@@ -5,14 +5,9 @@ import arrow.core.Left
 import arrow.core.Try
 import arrow.instances.either.monad.binding
 
-
 // Regex pattern for extracting digits from a phone number
 val pattern = """(\d)-(\d{3})-(\d{3})-(\d{4})""".toRegex()
 val incorrectPattern = """(\d)-(\d{3})-(\d{3})-(.{4})""".toRegex()
-
-fun String.safeToInt(): Either<Exception, Int> {
-    return Try { this.toInt() }.toEither { Exception("$this is not a number!") }
-}
 
 fun phoneNumberFrom(phone: String): PhoneNumber {
     val matched = pattern.matchEntire(phone)
