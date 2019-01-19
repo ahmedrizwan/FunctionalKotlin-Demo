@@ -1,6 +1,6 @@
 package demo
 
-fun fullNameToPerson(name: String): Person {
+fun personFrom(name: String): Person {
     val names = name.split(" ")
     val firstName = names[0]
     val lastName = names[1]
